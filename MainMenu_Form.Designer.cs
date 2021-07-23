@@ -29,21 +29,20 @@ namespace XML_Integration
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu_Form));
             this.Mid_Panel = new System.Windows.Forms.Panel();
             this.Mid_ExpandPanel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.Button_Panel = new System.Windows.Forms.Panel();
-            this.Top_Panel = new System.Windows.Forms.Panel();
-            this.Top_ExpandPanel = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.Logo_Panel = new System.Windows.Forms.Panel();
+            this.Logo_PictureBox = new System.Windows.Forms.PictureBox();
+            this.Header_Panel = new System.Windows.Forms.Panel();
+            this.Header_Label = new System.Windows.Forms.Label();
             this.Mid_Panel.SuspendLayout();
             this.Mid_ExpandPanel.SuspendLayout();
             this.Button_Panel.SuspendLayout();
-            this.Top_Panel.SuspendLayout();
-            this.Top_ExpandPanel.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.Logo_Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo_PictureBox)).BeginInit();
+            this.Header_Panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // Mid_Panel
@@ -58,78 +57,63 @@ namespace XML_Integration
             // 
             // Mid_ExpandPanel
             // 
-            this.Mid_ExpandPanel.Controls.Add(this.Top_Panel);
             this.Mid_ExpandPanel.Controls.Add(this.Button_Panel);
             this.Mid_ExpandPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Mid_ExpandPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(120)))), ((int)(((byte)(228)))));
             this.Mid_ExpandPanel.Location = new System.Drawing.Point(0, 0);
             this.Mid_ExpandPanel.Name = "Mid_ExpandPanel";
             this.Mid_ExpandPanel.Size = new System.Drawing.Size(826, 480);
             this.Mid_ExpandPanel.TabIndex = 0;
             // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 48);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // Button_Panel
             // 
-            this.Button_Panel.Controls.Add(this.button1);
+            this.Button_Panel.Controls.Add(this.Header_Panel);
+            this.Button_Panel.Controls.Add(this.Logo_Panel);
             this.Button_Panel.Dock = System.Windows.Forms.DockStyle.Left;
             this.Button_Panel.Location = new System.Drawing.Point(0, 0);
             this.Button_Panel.Name = "Button_Panel";
             this.Button_Panel.Size = new System.Drawing.Size(150, 480);
             this.Button_Panel.TabIndex = 1;
             // 
-            // Top_Panel
+            // Logo_Panel
             // 
-            this.Top_Panel.Controls.Add(this.Top_ExpandPanel);
-            this.Top_Panel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Top_Panel.Location = new System.Drawing.Point(150, 0);
-            this.Top_Panel.Name = "Top_Panel";
-            this.Top_Panel.Size = new System.Drawing.Size(676, 100);
-            this.Top_Panel.TabIndex = 2;
+            this.Logo_Panel.Controls.Add(this.Logo_PictureBox);
+            this.Logo_Panel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Logo_Panel.Location = new System.Drawing.Point(0, 0);
+            this.Logo_Panel.Name = "Logo_Panel";
+            this.Logo_Panel.Size = new System.Drawing.Size(150, 125);
+            this.Logo_Panel.TabIndex = 0;
             // 
-            // Top_ExpandPanel
+            // Logo_PictureBox
             // 
-            this.Top_ExpandPanel.Controls.Add(this.panel2);
-            this.Top_ExpandPanel.Controls.Add(this.panel1);
-            this.Top_ExpandPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Top_ExpandPanel.Location = new System.Drawing.Point(0, 0);
-            this.Top_ExpandPanel.Name = "Top_ExpandPanel";
-            this.Top_ExpandPanel.Size = new System.Drawing.Size(676, 100);
-            this.Top_ExpandPanel.TabIndex = 0;
+            this.Logo_PictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Logo_PictureBox.Image = global::XML_Integration.Properties.Resources.CurrencyX_ExchanceIcon;
+            this.Logo_PictureBox.Location = new System.Drawing.Point(0, 0);
+            this.Logo_PictureBox.Name = "Logo_PictureBox";
+            this.Logo_PictureBox.Size = new System.Drawing.Size(150, 125);
+            this.Logo_PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.Logo_PictureBox.TabIndex = 0;
+            this.Logo_PictureBox.TabStop = false;
             // 
-            // panel1
+            // Header_Panel
             // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(70, 100);
-            this.panel1.TabIndex = 0;
+            this.Header_Panel.Controls.Add(this.Header_Label);
+            this.Header_Panel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Header_Panel.Location = new System.Drawing.Point(0, 125);
+            this.Header_Panel.Name = "Header_Panel";
+            this.Header_Panel.Size = new System.Drawing.Size(150, 30);
+            this.Header_Panel.TabIndex = 1;
             // 
-            // panel2
+            // Header_Label
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(120)))), ((int)(((byte)(228)))));
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(70, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(160, 100);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(160, 3);
-            this.panel3.TabIndex = 0;
+            this.Header_Label.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Header_Label.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Header_Label.Location = new System.Drawing.Point(0, 0);
+            this.Header_Label.Name = "Header_Label";
+            this.Header_Label.Size = new System.Drawing.Size(150, 30);
+            this.Header_Label.TabIndex = 0;
+            this.Header_Label.Text = "CurrencyX";
+            this.Header_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MainMenu_Form
             // 
@@ -138,6 +122,7 @@ namespace XML_Integration
             this.Controls.Add(this.Mid_Panel);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainMenu_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CurrencyX";
@@ -145,9 +130,9 @@ namespace XML_Integration
             this.Mid_Panel.ResumeLayout(false);
             this.Mid_ExpandPanel.ResumeLayout(false);
             this.Button_Panel.ResumeLayout(false);
-            this.Top_Panel.ResumeLayout(false);
-            this.Top_ExpandPanel.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            this.Logo_Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Logo_PictureBox)).EndInit();
+            this.Header_Panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -157,12 +142,10 @@ namespace XML_Integration
         private System.Windows.Forms.Panel Mid_Panel;
         private System.Windows.Forms.Panel Mid_ExpandPanel;
         private System.Windows.Forms.Panel Button_Panel;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel Top_Panel;
-        private System.Windows.Forms.Panel Top_ExpandPanel;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel Logo_Panel;
+        private System.Windows.Forms.PictureBox Logo_PictureBox;
+        private System.Windows.Forms.Panel Header_Panel;
+        private System.Windows.Forms.Label Header_Label;
     }
 }
 

@@ -13,7 +13,6 @@ namespace XML_Integration
 {
     public partial class MainMenu_Form : Form
     {
-
         string xmlURL = "https://www.tcmb.gov.tr/kurlar/today.xml";
         XmlDocument xmlDocument = new XmlDocument();
 
