@@ -35,8 +35,27 @@ namespace XML_Integration
             this.Container_Panel = new System.Windows.Forms.Panel();
             this.Container_ExpandPanel = new System.Windows.Forms.Panel();
             this.MakeDeal_Panel = new System.Windows.Forms.Panel();
+            this.MakeDeal_ExpandPanel = new System.Windows.Forms.Panel();
+            this.MakeDeal_MidExpandPanel = new System.Windows.Forms.Panel();
+            this.MakeDeal_TopSeperatorPanel = new System.Windows.Forms.Panel();
+            this.MakeDeal_BotttomSeperatorPanel = new System.Windows.Forms.Panel();
+            this.MakeDeal_RightSeperatorPanel = new System.Windows.Forms.Panel();
+            this.MakeDeal_LeftSeperatorPanel = new System.Windows.Forms.Panel();
             this.MoneyStatistics_Panel = new System.Windows.Forms.Panel();
             this.MoneyStatistics_ExpandPanel = new System.Windows.Forms.Panel();
+            this.MoneyStatistics_RightPanel = new System.Windows.Forms.Panel();
+            this.MoneyStatistics_RightExpandPanel = new System.Windows.Forms.Panel();
+            this.XMLFormattedMoneyStatistics_RichTextBox = new System.Windows.Forms.RichTextBox();
+            this.MoneyStatistics_RightSeperatorPanel = new System.Windows.Forms.Panel();
+            this.MoneyStatistics_SeperatorPanel = new System.Windows.Forms.Panel();
+            this.MoneyStatistics_LeftPanel = new System.Windows.Forms.Panel();
+            this.MoneyStatistics_LeftExpandPanel = new System.Windows.Forms.Panel();
+            this.BanknoteSelling_Button = new System.Windows.Forms.Button();
+            this.BanknoteBuying_Button = new System.Windows.Forms.Button();
+            this.ForexSelling_Button = new System.Windows.Forms.Button();
+            this.ForexBuying_Button = new System.Windows.Forms.Button();
+            this.CurrencyName_Button = new System.Windows.Forms.Button();
+            this.MoneyStatistics_LeftSeperatorPanel = new System.Windows.Forms.Panel();
             this.MenuHeader_Label = new System.Windows.Forms.Label();
             this.Top_Panel = new System.Windows.Forms.Panel();
             this.Top_ExpandPanel = new System.Windows.Forms.Panel();
@@ -57,17 +76,18 @@ namespace XML_Integration
             this.Header_Label = new System.Windows.Forms.Label();
             this.Logo_Panel = new System.Windows.Forms.Panel();
             this.Logo_PictureBox = new System.Windows.Forms.PictureBox();
-            this.MakeDeal_ExpandPanel = new System.Windows.Forms.Panel();
-            this.MoneyStatistics_LeftPanel = new System.Windows.Forms.Panel();
-            this.MoneyStatistics_SeperatorPanel = new System.Windows.Forms.Panel();
-            this.MoneyStatistics_RightPanel = new System.Windows.Forms.Panel();
             this.Mid_Panel.SuspendLayout();
             this.Mid_ExpandPanel.SuspendLayout();
             this.Container_Panel.SuspendLayout();
             this.Container_ExpandPanel.SuspendLayout();
             this.MakeDeal_Panel.SuspendLayout();
+            this.MakeDeal_ExpandPanel.SuspendLayout();
             this.MoneyStatistics_Panel.SuspendLayout();
             this.MoneyStatistics_ExpandPanel.SuspendLayout();
+            this.MoneyStatistics_RightPanel.SuspendLayout();
+            this.MoneyStatistics_RightExpandPanel.SuspendLayout();
+            this.MoneyStatistics_LeftPanel.SuspendLayout();
+            this.MoneyStatistics_LeftExpandPanel.SuspendLayout();
             this.Top_Panel.SuspendLayout();
             this.Top_ExpandPanel.SuspendLayout();
             this.PaddingTop_Panel.SuspendLayout();
@@ -128,6 +148,64 @@ namespace XML_Integration
             this.MakeDeal_Panel.Size = new System.Drawing.Size(676, 200);
             this.MakeDeal_Panel.TabIndex = 2;
             // 
+            // MakeDeal_ExpandPanel
+            // 
+            this.MakeDeal_ExpandPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.MakeDeal_ExpandPanel.Controls.Add(this.MakeDeal_MidExpandPanel);
+            this.MakeDeal_ExpandPanel.Controls.Add(this.MakeDeal_TopSeperatorPanel);
+            this.MakeDeal_ExpandPanel.Controls.Add(this.MakeDeal_BotttomSeperatorPanel);
+            this.MakeDeal_ExpandPanel.Controls.Add(this.MakeDeal_RightSeperatorPanel);
+            this.MakeDeal_ExpandPanel.Controls.Add(this.MakeDeal_LeftSeperatorPanel);
+            this.MakeDeal_ExpandPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MakeDeal_ExpandPanel.Location = new System.Drawing.Point(0, 0);
+            this.MakeDeal_ExpandPanel.Name = "MakeDeal_ExpandPanel";
+            this.MakeDeal_ExpandPanel.Size = new System.Drawing.Size(676, 200);
+            this.MakeDeal_ExpandPanel.TabIndex = 0;
+            // 
+            // MakeDeal_MidExpandPanel
+            // 
+            this.MakeDeal_MidExpandPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MakeDeal_MidExpandPanel.Location = new System.Drawing.Point(10, 10);
+            this.MakeDeal_MidExpandPanel.Name = "MakeDeal_MidExpandPanel";
+            this.MakeDeal_MidExpandPanel.Size = new System.Drawing.Size(656, 180);
+            this.MakeDeal_MidExpandPanel.TabIndex = 5;
+            // 
+            // MakeDeal_TopSeperatorPanel
+            // 
+            this.MakeDeal_TopSeperatorPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(49)))), ((int)(((byte)(64)))));
+            this.MakeDeal_TopSeperatorPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.MakeDeal_TopSeperatorPanel.Location = new System.Drawing.Point(10, 0);
+            this.MakeDeal_TopSeperatorPanel.Name = "MakeDeal_TopSeperatorPanel";
+            this.MakeDeal_TopSeperatorPanel.Size = new System.Drawing.Size(656, 10);
+            this.MakeDeal_TopSeperatorPanel.TabIndex = 4;
+            // 
+            // MakeDeal_BotttomSeperatorPanel
+            // 
+            this.MakeDeal_BotttomSeperatorPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(49)))), ((int)(((byte)(64)))));
+            this.MakeDeal_BotttomSeperatorPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.MakeDeal_BotttomSeperatorPanel.Location = new System.Drawing.Point(10, 190);
+            this.MakeDeal_BotttomSeperatorPanel.Name = "MakeDeal_BotttomSeperatorPanel";
+            this.MakeDeal_BotttomSeperatorPanel.Size = new System.Drawing.Size(656, 10);
+            this.MakeDeal_BotttomSeperatorPanel.TabIndex = 3;
+            // 
+            // MakeDeal_RightSeperatorPanel
+            // 
+            this.MakeDeal_RightSeperatorPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(49)))), ((int)(((byte)(64)))));
+            this.MakeDeal_RightSeperatorPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.MakeDeal_RightSeperatorPanel.Location = new System.Drawing.Point(666, 0);
+            this.MakeDeal_RightSeperatorPanel.Name = "MakeDeal_RightSeperatorPanel";
+            this.MakeDeal_RightSeperatorPanel.Size = new System.Drawing.Size(10, 200);
+            this.MakeDeal_RightSeperatorPanel.TabIndex = 2;
+            // 
+            // MakeDeal_LeftSeperatorPanel
+            // 
+            this.MakeDeal_LeftSeperatorPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(49)))), ((int)(((byte)(64)))));
+            this.MakeDeal_LeftSeperatorPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.MakeDeal_LeftSeperatorPanel.Location = new System.Drawing.Point(0, 0);
+            this.MakeDeal_LeftSeperatorPanel.Name = "MakeDeal_LeftSeperatorPanel";
+            this.MakeDeal_LeftSeperatorPanel.Size = new System.Drawing.Size(10, 200);
+            this.MakeDeal_LeftSeperatorPanel.TabIndex = 1;
+            // 
             // MoneyStatistics_Panel
             // 
             this.MoneyStatistics_Panel.Controls.Add(this.MoneyStatistics_ExpandPanel);
@@ -148,17 +226,193 @@ namespace XML_Integration
             this.MoneyStatistics_ExpandPanel.Size = new System.Drawing.Size(676, 200);
             this.MoneyStatistics_ExpandPanel.TabIndex = 0;
             // 
+            // MoneyStatistics_RightPanel
+            // 
+            this.MoneyStatistics_RightPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.MoneyStatistics_RightPanel.Controls.Add(this.MoneyStatistics_RightExpandPanel);
+            this.MoneyStatistics_RightPanel.Controls.Add(this.MoneyStatistics_RightSeperatorPanel);
+            this.MoneyStatistics_RightPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.MoneyStatistics_RightPanel.Location = new System.Drawing.Point(343, 0);
+            this.MoneyStatistics_RightPanel.Name = "MoneyStatistics_RightPanel";
+            this.MoneyStatistics_RightPanel.Size = new System.Drawing.Size(333, 200);
+            this.MoneyStatistics_RightPanel.TabIndex = 2;
+            // 
+            // MoneyStatistics_RightExpandPanel
+            // 
+            this.MoneyStatistics_RightExpandPanel.Controls.Add(this.XMLFormattedMoneyStatistics_RichTextBox);
+            this.MoneyStatistics_RightExpandPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MoneyStatistics_RightExpandPanel.Location = new System.Drawing.Point(0, 0);
+            this.MoneyStatistics_RightExpandPanel.Name = "MoneyStatistics_RightExpandPanel";
+            this.MoneyStatistics_RightExpandPanel.Size = new System.Drawing.Size(323, 200);
+            this.MoneyStatistics_RightExpandPanel.TabIndex = 1;
+            // 
+            // XMLFormattedMoneyStatistics_RichTextBox
+            // 
+            this.XMLFormattedMoneyStatistics_RichTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(49)))), ((int)(((byte)(64)))));
+            this.XMLFormattedMoneyStatistics_RichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.XMLFormattedMoneyStatistics_RichTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(120)))), ((int)(((byte)(228)))));
+            this.XMLFormattedMoneyStatistics_RichTextBox.Location = new System.Drawing.Point(9, 10);
+            this.XMLFormattedMoneyStatistics_RichTextBox.Name = "XMLFormattedMoneyStatistics_RichTextBox";
+            this.XMLFormattedMoneyStatistics_RichTextBox.Size = new System.Drawing.Size(304, 180);
+            this.XMLFormattedMoneyStatistics_RichTextBox.TabIndex = 0;
+            this.XMLFormattedMoneyStatistics_RichTextBox.Text = "  XML Formatted:";
+            // 
+            // MoneyStatistics_RightSeperatorPanel
+            // 
+            this.MoneyStatistics_RightSeperatorPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(49)))), ((int)(((byte)(64)))));
+            this.MoneyStatistics_RightSeperatorPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.MoneyStatistics_RightSeperatorPanel.Location = new System.Drawing.Point(323, 0);
+            this.MoneyStatistics_RightSeperatorPanel.Name = "MoneyStatistics_RightSeperatorPanel";
+            this.MoneyStatistics_RightSeperatorPanel.Size = new System.Drawing.Size(10, 200);
+            this.MoneyStatistics_RightSeperatorPanel.TabIndex = 0;
+            // 
+            // MoneyStatistics_SeperatorPanel
+            // 
+            this.MoneyStatistics_SeperatorPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.MoneyStatistics_SeperatorPanel.Location = new System.Drawing.Point(333, 0);
+            this.MoneyStatistics_SeperatorPanel.Name = "MoneyStatistics_SeperatorPanel";
+            this.MoneyStatistics_SeperatorPanel.Size = new System.Drawing.Size(10, 200);
+            this.MoneyStatistics_SeperatorPanel.TabIndex = 1;
+            // 
+            // MoneyStatistics_LeftPanel
+            // 
+            this.MoneyStatistics_LeftPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.MoneyStatistics_LeftPanel.Controls.Add(this.MoneyStatistics_LeftExpandPanel);
+            this.MoneyStatistics_LeftPanel.Controls.Add(this.MoneyStatistics_LeftSeperatorPanel);
+            this.MoneyStatistics_LeftPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.MoneyStatistics_LeftPanel.Location = new System.Drawing.Point(0, 0);
+            this.MoneyStatistics_LeftPanel.Name = "MoneyStatistics_LeftPanel";
+            this.MoneyStatistics_LeftPanel.Size = new System.Drawing.Size(333, 200);
+            this.MoneyStatistics_LeftPanel.TabIndex = 0;
+            // 
+            // MoneyStatistics_LeftExpandPanel
+            // 
+            this.MoneyStatistics_LeftExpandPanel.Controls.Add(this.BanknoteSelling_Button);
+            this.MoneyStatistics_LeftExpandPanel.Controls.Add(this.BanknoteBuying_Button);
+            this.MoneyStatistics_LeftExpandPanel.Controls.Add(this.ForexSelling_Button);
+            this.MoneyStatistics_LeftExpandPanel.Controls.Add(this.ForexBuying_Button);
+            this.MoneyStatistics_LeftExpandPanel.Controls.Add(this.CurrencyName_Button);
+            this.MoneyStatistics_LeftExpandPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MoneyStatistics_LeftExpandPanel.Location = new System.Drawing.Point(10, 0);
+            this.MoneyStatistics_LeftExpandPanel.Name = "MoneyStatistics_LeftExpandPanel";
+            this.MoneyStatistics_LeftExpandPanel.Size = new System.Drawing.Size(323, 200);
+            this.MoneyStatistics_LeftExpandPanel.TabIndex = 2;
+            // 
+            // BanknoteSelling_Button
+            // 
+            this.BanknoteSelling_Button.Cursor = System.Windows.Forms.Cursors.Default;
+            this.BanknoteSelling_Button.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BanknoteSelling_Button.FlatAppearance.BorderSize = 0;
+            this.BanknoteSelling_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.BanknoteSelling_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.BanknoteSelling_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BanknoteSelling_Button.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BanknoteSelling_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BanknoteSelling_Button.Location = new System.Drawing.Point(0, 160);
+            this.BanknoteSelling_Button.Name = "BanknoteSelling_Button";
+            this.BanknoteSelling_Button.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.BanknoteSelling_Button.Size = new System.Drawing.Size(323, 40);
+            this.BanknoteSelling_Button.TabIndex = 8;
+            this.BanknoteSelling_Button.Text = "Banknote Selling:";
+            this.BanknoteSelling_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BanknoteSelling_Button.UseVisualStyleBackColor = true;
+            // 
+            // BanknoteBuying_Button
+            // 
+            this.BanknoteBuying_Button.Cursor = System.Windows.Forms.Cursors.Default;
+            this.BanknoteBuying_Button.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BanknoteBuying_Button.FlatAppearance.BorderSize = 0;
+            this.BanknoteBuying_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.BanknoteBuying_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.BanknoteBuying_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BanknoteBuying_Button.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BanknoteBuying_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BanknoteBuying_Button.Location = new System.Drawing.Point(0, 120);
+            this.BanknoteBuying_Button.Name = "BanknoteBuying_Button";
+            this.BanknoteBuying_Button.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.BanknoteBuying_Button.Size = new System.Drawing.Size(323, 40);
+            this.BanknoteBuying_Button.TabIndex = 7;
+            this.BanknoteBuying_Button.Text = "Banknote Buying:";
+            this.BanknoteBuying_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BanknoteBuying_Button.UseVisualStyleBackColor = true;
+            // 
+            // ForexSelling_Button
+            // 
+            this.ForexSelling_Button.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ForexSelling_Button.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ForexSelling_Button.FlatAppearance.BorderSize = 0;
+            this.ForexSelling_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.ForexSelling_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.ForexSelling_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ForexSelling_Button.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ForexSelling_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ForexSelling_Button.Location = new System.Drawing.Point(0, 80);
+            this.ForexSelling_Button.Name = "ForexSelling_Button";
+            this.ForexSelling_Button.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.ForexSelling_Button.Size = new System.Drawing.Size(323, 40);
+            this.ForexSelling_Button.TabIndex = 6;
+            this.ForexSelling_Button.Text = "Forex Selling:";
+            this.ForexSelling_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ForexSelling_Button.UseVisualStyleBackColor = true;
+            // 
+            // ForexBuying_Button
+            // 
+            this.ForexBuying_Button.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ForexBuying_Button.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ForexBuying_Button.FlatAppearance.BorderSize = 0;
+            this.ForexBuying_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.ForexBuying_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.ForexBuying_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ForexBuying_Button.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ForexBuying_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ForexBuying_Button.Location = new System.Drawing.Point(0, 40);
+            this.ForexBuying_Button.Name = "ForexBuying_Button";
+            this.ForexBuying_Button.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.ForexBuying_Button.Size = new System.Drawing.Size(323, 40);
+            this.ForexBuying_Button.TabIndex = 5;
+            this.ForexBuying_Button.Text = "Forex Buying:";
+            this.ForexBuying_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ForexBuying_Button.UseVisualStyleBackColor = true;
+            // 
+            // CurrencyName_Button
+            // 
+            this.CurrencyName_Button.Cursor = System.Windows.Forms.Cursors.Default;
+            this.CurrencyName_Button.Dock = System.Windows.Forms.DockStyle.Top;
+            this.CurrencyName_Button.FlatAppearance.BorderSize = 0;
+            this.CurrencyName_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.CurrencyName_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.CurrencyName_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CurrencyName_Button.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.CurrencyName_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.CurrencyName_Button.Location = new System.Drawing.Point(0, 0);
+            this.CurrencyName_Button.Name = "CurrencyName_Button";
+            this.CurrencyName_Button.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.CurrencyName_Button.Size = new System.Drawing.Size(323, 40);
+            this.CurrencyName_Button.TabIndex = 4;
+            this.CurrencyName_Button.Text = "Currency Name:";
+            this.CurrencyName_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CurrencyName_Button.UseVisualStyleBackColor = true;
+            // 
+            // MoneyStatistics_LeftSeperatorPanel
+            // 
+            this.MoneyStatistics_LeftSeperatorPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(49)))), ((int)(((byte)(64)))));
+            this.MoneyStatistics_LeftSeperatorPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.MoneyStatistics_LeftSeperatorPanel.Location = new System.Drawing.Point(0, 0);
+            this.MoneyStatistics_LeftSeperatorPanel.Name = "MoneyStatistics_LeftSeperatorPanel";
+            this.MoneyStatistics_LeftSeperatorPanel.Size = new System.Drawing.Size(10, 200);
+            this.MoneyStatistics_LeftSeperatorPanel.TabIndex = 0;
+            // 
             // MenuHeader_Label
             // 
             this.MenuHeader_Label.Dock = System.Windows.Forms.DockStyle.Top;
-            this.MenuHeader_Label.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.MenuHeader_Label.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.MenuHeader_Label.Location = new System.Drawing.Point(0, 0);
             this.MenuHeader_Label.Name = "MenuHeader_Label";
-            this.MenuHeader_Label.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.MenuHeader_Label.Padding = new System.Windows.Forms.Padding(10, 0, 10, 5);
             this.MenuHeader_Label.Size = new System.Drawing.Size(676, 50);
             this.MenuHeader_Label.TabIndex = 0;
             this.MenuHeader_Label.Text = "Buy USD";
-            this.MenuHeader_Label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MenuHeader_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Top_Panel
             // 
@@ -189,8 +443,9 @@ namespace XML_Integration
             this.Minimize_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.Minimize_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Minimize_Button.Image = global::XML_Integration.Properties.Resources.CurrencyX_MinimizeIcon;
-            this.Minimize_Button.Location = new System.Drawing.Point(606, 0);
+            this.Minimize_Button.Location = new System.Drawing.Point(611, 0);
             this.Minimize_Button.Name = "Minimize_Button";
+            this.Minimize_Button.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.Minimize_Button.Size = new System.Drawing.Size(30, 30);
             this.Minimize_Button.TabIndex = 2;
             this.Minimize_Button.UseVisualStyleBackColor = true;
@@ -205,8 +460,9 @@ namespace XML_Integration
             this.Exit_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.Exit_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Exit_Button.Image = global::XML_Integration.Properties.Resources.CurrencyX_ExitIcon;
-            this.Exit_Button.Location = new System.Drawing.Point(636, 0);
+            this.Exit_Button.Location = new System.Drawing.Point(641, 0);
             this.Exit_Button.Name = "Exit_Button";
+            this.Exit_Button.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.Exit_Button.Size = new System.Drawing.Size(30, 30);
             this.Exit_Button.TabIndex = 1;
             this.Exit_Button.UseVisualStyleBackColor = true;
@@ -216,9 +472,9 @@ namespace XML_Integration
             // 
             this.PaddingTop_Panel.Controls.Add(this.PaddingTop_PanelExpand);
             this.PaddingTop_Panel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.PaddingTop_Panel.Location = new System.Drawing.Point(666, 0);
+            this.PaddingTop_Panel.Location = new System.Drawing.Point(671, 0);
             this.PaddingTop_Panel.Name = "PaddingTop_Panel";
-            this.PaddingTop_Panel.Size = new System.Drawing.Size(10, 30);
+            this.PaddingTop_Panel.Size = new System.Drawing.Size(5, 30);
             this.PaddingTop_Panel.TabIndex = 0;
             // 
             // PaddingTop_PanelExpand
@@ -226,7 +482,7 @@ namespace XML_Integration
             this.PaddingTop_PanelExpand.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PaddingTop_PanelExpand.Location = new System.Drawing.Point(0, 0);
             this.PaddingTop_PanelExpand.Name = "PaddingTop_PanelExpand";
-            this.PaddingTop_PanelExpand.Size = new System.Drawing.Size(10, 30);
+            this.PaddingTop_PanelExpand.Size = new System.Drawing.Size(5, 30);
             this.PaddingTop_PanelExpand.TabIndex = 1;
             // 
             // Button_Panel
@@ -444,38 +700,6 @@ namespace XML_Integration
             this.Logo_PictureBox.TabIndex = 0;
             this.Logo_PictureBox.TabStop = false;
             // 
-            // MakeDeal_ExpandPanel
-            // 
-            this.MakeDeal_ExpandPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MakeDeal_ExpandPanel.Location = new System.Drawing.Point(0, 0);
-            this.MakeDeal_ExpandPanel.Name = "MakeDeal_ExpandPanel";
-            this.MakeDeal_ExpandPanel.Size = new System.Drawing.Size(676, 200);
-            this.MakeDeal_ExpandPanel.TabIndex = 0;
-            // 
-            // MoneyStatistics_LeftPanel
-            // 
-            this.MoneyStatistics_LeftPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.MoneyStatistics_LeftPanel.Location = new System.Drawing.Point(0, 0);
-            this.MoneyStatistics_LeftPanel.Name = "MoneyStatistics_LeftPanel";
-            this.MoneyStatistics_LeftPanel.Size = new System.Drawing.Size(328, 200);
-            this.MoneyStatistics_LeftPanel.TabIndex = 0;
-            // 
-            // MoneyStatistics_SeperatorPanel
-            // 
-            this.MoneyStatistics_SeperatorPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.MoneyStatistics_SeperatorPanel.Location = new System.Drawing.Point(328, 0);
-            this.MoneyStatistics_SeperatorPanel.Name = "MoneyStatistics_SeperatorPanel";
-            this.MoneyStatistics_SeperatorPanel.Size = new System.Drawing.Size(20, 200);
-            this.MoneyStatistics_SeperatorPanel.TabIndex = 1;
-            // 
-            // MoneyStatistics_RightPanel
-            // 
-            this.MoneyStatistics_RightPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.MoneyStatistics_RightPanel.Location = new System.Drawing.Point(348, 0);
-            this.MoneyStatistics_RightPanel.Name = "MoneyStatistics_RightPanel";
-            this.MoneyStatistics_RightPanel.Size = new System.Drawing.Size(328, 200);
-            this.MoneyStatistics_RightPanel.TabIndex = 2;
-            // 
             // MainMenu_Form
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -493,8 +717,13 @@ namespace XML_Integration
             this.Container_Panel.ResumeLayout(false);
             this.Container_ExpandPanel.ResumeLayout(false);
             this.MakeDeal_Panel.ResumeLayout(false);
+            this.MakeDeal_ExpandPanel.ResumeLayout(false);
             this.MoneyStatistics_Panel.ResumeLayout(false);
             this.MoneyStatistics_ExpandPanel.ResumeLayout(false);
+            this.MoneyStatistics_RightPanel.ResumeLayout(false);
+            this.MoneyStatistics_RightExpandPanel.ResumeLayout(false);
+            this.MoneyStatistics_LeftPanel.ResumeLayout(false);
+            this.MoneyStatistics_LeftExpandPanel.ResumeLayout(false);
             this.Top_Panel.ResumeLayout(false);
             this.Top_ExpandPanel.ResumeLayout(false);
             this.PaddingTop_Panel.ResumeLayout(false);
@@ -539,6 +768,21 @@ namespace XML_Integration
         private System.Windows.Forms.Panel MoneyStatistics_RightPanel;
         private System.Windows.Forms.Panel MoneyStatistics_SeperatorPanel;
         private System.Windows.Forms.Panel MoneyStatistics_LeftPanel;
+        private System.Windows.Forms.Panel MakeDeal_BotttomSeperatorPanel;
+        private System.Windows.Forms.Panel MakeDeal_RightSeperatorPanel;
+        private System.Windows.Forms.Panel MakeDeal_LeftSeperatorPanel;
+        private System.Windows.Forms.Panel MoneyStatistics_RightSeperatorPanel;
+        private System.Windows.Forms.Panel MoneyStatistics_LeftSeperatorPanel;
+        private System.Windows.Forms.Panel MakeDeal_TopSeperatorPanel;
+        private System.Windows.Forms.Panel MakeDeal_MidExpandPanel;
+        private System.Windows.Forms.Panel MoneyStatistics_RightExpandPanel;
+        private System.Windows.Forms.Panel MoneyStatistics_LeftExpandPanel;
+        private System.Windows.Forms.RichTextBox XMLFormattedMoneyStatistics_RichTextBox;
+        private System.Windows.Forms.Button BanknoteSelling_Button;
+        private System.Windows.Forms.Button BanknoteBuying_Button;
+        private System.Windows.Forms.Button ForexSelling_Button;
+        private System.Windows.Forms.Button ForexBuying_Button;
+        private System.Windows.Forms.Button CurrencyName_Button;
     }
 }
 

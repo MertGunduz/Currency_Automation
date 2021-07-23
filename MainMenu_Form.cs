@@ -17,16 +17,43 @@ namespace XML_Integration
         XmlDocument xmlDocument = new XmlDocument();
 
         // Dollar
-        double dollarBuyPrice;
-        double dollarSellPrice;
+        string dollarName;
+        double dollarForexBuyPrice;
+        double dollarForexSellPrice;
+        double dollarBanknoteBuyPrice;
+        double dollarBanknoteSellPrice;
+
+        string dollarNameXml;
+        string dollarForexBuyPriceXml;
+        string dollarForexSellPriceXml;
+        string dollarBanknoteBuyPriceXml;
+        string dollarBanknoteSellPriceXml;
 
         // Euro
-        double euroBuyPrice;
-        double euroSellPrice;
+        string euroName;
+        double euroForexBuyPrice;
+        double euroForexSellPrice;
+        double euroBanknoteBuyPrice;
+        double euroBanknoteSellPrice;
+
+        string euroNameXml;
+        string euroForexBuyPriceXml;
+        string euroForexSellPriceXml;
+        string euroBanknoteBuyPriceXml;
+        string euroBanknoteSellPriceXml;
 
         // Kuwait Dinar
-        double dinarBuyPrice;
-        double dinarSellPrice;
+        string dinarName;
+        double dinarForexBuyPrice;
+        double dinarForexSellPrice;
+        double dinarBanknoteBuyPrice;
+        double dinarBanknoteSellPrice;
+
+        string dinarNameXml;
+        string dinarForexBuyPriceXml;
+        string dinarForexSellPriceXml;
+        string dinarBanknoteBuyPriceXml;
+        string dinarBanknoteSellPriceXml;
 
         public MainMenu_Form()
         {
@@ -36,52 +63,104 @@ namespace XML_Integration
         private void MainMenu_Form_Load(object sender, EventArgs e)
         {
             xmlDocument.Load(xmlURL);
+            // Dollar
+            dollarName = xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='USD']/CurrencyName").InnerXml;
+            dollarForexBuyPrice = Convert.ToDouble(xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='USD']/ForexBuying").InnerXml);
+            dollarForexSellPrice = Convert.ToDouble(xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='USD']/ForexSelling").InnerXml);
+            dollarBanknoteBuyPrice = Convert.ToDouble(xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='USD']/BanknoteBuying").InnerXml);
+            dollarBanknoteSellPrice = Convert.ToDouble(xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='USD']/BanknoteSelling").InnerXml);
 
-            dollarBuyPrice = Convert.ToDouble(xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='USD']/BanknoteBuying").InnerXml);
-            dollarSellPrice = Convert.ToDouble(xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='USD']/BanknoteSelling").InnerXml);
-            euroBuyPrice = Convert.ToDouble(xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='EUR']/BanknoteBuying").InnerXml);
-            euroSellPrice = Convert.ToDouble(xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='EUR']/BanknoteSelling").InnerXml);
-            dinarBuyPrice = Convert.ToDouble(xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='KWD']/BanknoteBuying").InnerXml);
-            dinarSellPrice = Convert.ToDouble(xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='KWD']/BanknoteSelling").InnerXml);
+            dollarNameXml = xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='USD']/CurrencyName").OuterXml;
+            dollarForexBuyPriceXml = xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='USD']/ForexBuying").OuterXml;
+            dollarForexSellPriceXml = xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='USD']/ForexSelling").OuterXml;
+            dollarBanknoteBuyPriceXml = xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='USD']/BanknoteBuying").OuterXml;
+            dollarBanknoteSellPriceXml = xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='USD']/BanknoteSelling").OuterXml;
+
+            // Euro
+            euroName = xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='EUR']/CurrencyName").InnerXml;
+            euroForexBuyPrice = Convert.ToDouble(xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='EUR']/ForexBuying").InnerXml);
+            euroForexSellPrice = Convert.ToDouble(xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='EUR']/ForexSelling").InnerXml);
+            euroBanknoteBuyPrice = Convert.ToDouble(xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='EUR']/BanknoteBuying").InnerXml);
+            euroBanknoteSellPrice = Convert.ToDouble(xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='EUR']/BanknoteSelling").InnerXml);
+
+            euroNameXml = xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='EUR']/CurrencyName").OuterXml;
+            euroForexBuyPriceXml = xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='EUR']/ForexBuying").OuterXml;
+            euroForexSellPriceXml = xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='EUR']/ForexSelling").OuterXml;
+            euroBanknoteBuyPriceXml = xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='EUR']/BanknoteBuying").OuterXml;
+            euroBanknoteSellPriceXml = xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='EUR']/BanknoteSelling").OuterXml;
+
+            // Kuwait Dinar
+            dinarName = xmlDocument.SelectSingleNode("Tarih_Date/Currency[@CurrencyCode='KWD']/CurrencyName").InnerXml;
+            dinarForexBuyPrice = Convert.ToDouble(xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='KWD']/ForexBuying").InnerXml);
+            dinarForexSellPrice = Convert.ToDouble(xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='KWD']/ForexSelling").InnerXml);
+            dinarBanknoteBuyPrice = Convert.ToDouble(xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='KWD']/BanknoteBuying").InnerXml);
+            dinarBanknoteSellPrice = Convert.ToDouble(xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='KWD']/BanknoteSelling").InnerXml);
+
+            dinarNameXml = xmlDocument.SelectSingleNode("Tarih_Date/Currency[@CurrencyCode='KWD']/CurrencyName").OuterXml;
+            dinarForexBuyPriceXml = xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='KWD']/ForexBuying").OuterXml;
+            dinarForexSellPriceXml = xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='KWD']/ForexSelling").OuterXml;
+            dinarBanknoteBuyPriceXml = xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='KWD']/BanknoteBuying").OuterXml;
+            dinarBanknoteSellPriceXml = xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='KWD']/BanknoteSelling").OuterXml;
+
+            CurrencyUpdater(dollarName, dollarForexBuyPrice, dollarForexSellPrice, dollarBanknoteBuyPrice, dollarBanknoteSellPrice);
+            XMLFormattedMoneyStatistics_RichTextBox.Text = $"{dollarNameXml}\n{dollarForexBuyPriceXml}\n{dollarForexSellPriceXml}\n{dollarBanknoteBuyPriceXml}\n{dollarBanknoteSellPriceXml}";
         }
 
         private void BuyUSD_Button_Click(object sender, EventArgs e)
         {
             ButtonUIChange(BuyUSD_Button, SellUSD_Button, BuyEUR_Button, SellEUR_Button, BuyKWD_Button, SellKWD_Button, Settings_Button, Navigation_Panel, MenuHeader_Label);
+            CurrencyUpdater(dollarName, dollarForexBuyPrice, dollarForexSellPrice, dollarBanknoteBuyPrice, dollarBanknoteSellPrice);
+            XMLFormattedMoneyStatistics_RichTextBox.Text = $"{dollarNameXml}\n{dollarForexBuyPriceXml}\n{dollarForexSellPriceXml}\n{dollarBanknoteBuyPriceXml}\n{dollarBanknoteSellPriceXml}";
         }
 
         private void SellUSD_Button_Click(object sender, EventArgs e)
         {
             ButtonUIChange(SellUSD_Button, BuyUSD_Button, BuyEUR_Button, SellEUR_Button, BuyKWD_Button, SellKWD_Button, Settings_Button, Navigation_Panel, MenuHeader_Label);
-
+            CurrencyUpdater(dollarName, dollarForexBuyPrice, dollarForexSellPrice, dollarBanknoteBuyPrice, dollarBanknoteSellPrice);
+            XMLFormattedMoneyStatistics_RichTextBox.Text = $"{dollarNameXml}\n{dollarForexBuyPriceXml}\n{dollarForexSellPriceXml}\n{dollarBanknoteBuyPriceXml}\n{dollarBanknoteSellPriceXml}";
         }
 
         private void BuyEUR_Button_Click(object sender, EventArgs e)
         {
             ButtonUIChange(BuyEUR_Button, SellUSD_Button, BuyUSD_Button, SellEUR_Button, BuyKWD_Button, SellKWD_Button, Settings_Button, Navigation_Panel, MenuHeader_Label);
+            CurrencyUpdater(euroName, euroForexBuyPrice, euroForexSellPrice, euroBanknoteBuyPrice, euroBanknoteSellPrice);
+            XMLFormattedMoneyStatistics_RichTextBox.Text = $"{euroNameXml}\n{euroForexBuyPriceXml}\n{euroForexSellPriceXml}\n{euroBanknoteBuyPriceXml}\n{euroBanknoteSellPriceXml}";
 
         }
 
         private void SellEUR_Button_Click(object sender, EventArgs e)
         {
             ButtonUIChange(SellEUR_Button, SellUSD_Button, BuyEUR_Button, BuyUSD_Button, BuyKWD_Button, SellKWD_Button, Settings_Button, Navigation_Panel, MenuHeader_Label);
-
+            CurrencyUpdater(euroName, euroForexBuyPrice, euroForexSellPrice, euroBanknoteBuyPrice, euroBanknoteSellPrice);
+            XMLFormattedMoneyStatistics_RichTextBox.Text = $"{euroNameXml}\n{euroForexBuyPriceXml}\n{euroForexSellPriceXml}\n{euroBanknoteBuyPriceXml}\n{euroBanknoteSellPriceXml}";
         }
 
         private void BuyKWD_Button_Click(object sender, EventArgs e)
         {
             ButtonUIChange(BuyKWD_Button, SellUSD_Button, BuyEUR_Button, SellEUR_Button, BuyUSD_Button, SellKWD_Button, Settings_Button, Navigation_Panel, MenuHeader_Label);
+            CurrencyUpdater(dinarName, dinarForexBuyPrice, dinarForexSellPrice, dinarBanknoteBuyPrice, dinarBanknoteSellPrice);
+            XMLFormattedMoneyStatistics_RichTextBox.Text = $"{dinarNameXml}\n{dinarForexBuyPriceXml}\n{dinarForexSellPriceXml}\n{dinarBanknoteBuyPriceXml}\n{dinarBanknoteSellPriceXml}";
         }
 
         private void SellKWD_Button_Click(object sender, EventArgs e)
         {
             ButtonUIChange(SellKWD_Button, SellUSD_Button, BuyEUR_Button, SellEUR_Button, BuyKWD_Button, BuyUSD_Button, Settings_Button, Navigation_Panel, MenuHeader_Label);
-
+            CurrencyUpdater(dinarName, dinarForexBuyPrice, dinarForexSellPrice, dinarBanknoteBuyPrice, dinarBanknoteSellPrice);
+            XMLFormattedMoneyStatistics_RichTextBox.Text = $"{dinarNameXml}\n{dinarForexBuyPriceXml}\n{dinarForexSellPriceXml}\n{dinarBanknoteBuyPriceXml}\n{dinarBanknoteSellPriceXml}";
         }
 
         private void Settings_Button_Click(object sender, EventArgs e)
         {
             ButtonUIChange(Settings_Button, SellUSD_Button, BuyEUR_Button, SellEUR_Button, BuyKWD_Button, SellKWD_Button, BuyUSD_Button, Navigation_Panel, MenuHeader_Label);
+        }
+        private void Minimize_Button_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void Exit_Button_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void ButtonUIChange(Button clickedButton, Button secondButton, Button thirdButton, Button fourthButton, Button fifthButton, Button sixthButton, Button seventhButton, Panel navigatingPanel, Label menuHeaderLabel)
@@ -120,14 +199,13 @@ namespace XML_Integration
             seventhButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(19, 30, 45);
         }
 
-        private void Minimize_Button_Click(object sender, EventArgs e)
+        private void CurrencyUpdater(string pickedCurrencyName, double forexBuyingPrice, double forexSellingPrice, double banknoteBuyingPrice, double banknoteSellingPrice)
         {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void Exit_Button_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
+            CurrencyName_Button.Text = $"Currency Name:   {pickedCurrencyName}";
+            ForexBuying_Button.Text = $"Forex Buying:   {forexBuyingPrice}";
+            ForexSelling_Button.Text = $"Forex Selling:   {forexSellingPrice}";
+            BanknoteBuying_Button.Text = $"Banknote Buying:   {banknoteBuyingPrice}";
+            BanknoteSelling_Button.Text = $"Banknote Selling:   {banknoteSellingPrice}";
         }
     }
 }
