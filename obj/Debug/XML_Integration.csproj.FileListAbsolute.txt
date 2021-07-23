@@ -1,0 +1,10 @@
+C:\Users\u\source\repos\XML_Integration\bin\Debug\XML_Integration.exe.config
+C:\Users\u\source\repos\XML_Integration\bin\Debug\XML_Integration.exe
+C:\Users\u\source\repos\XML_Integration\bin\Debug\XML_Integration.pdb
+C:\Users\u\source\repos\XML_Integration\obj\Debug\XML_Integration.csproj.AssemblyReference.cache
+C:\Users\u\source\repos\XML_Integration\obj\Debug\XML_Integration.MainMenu_Form.resources
+C:\Users\u\source\repos\XML_Integration\obj\Debug\XML_Integration.Properties.Resources.resources
+C:\Users\u\source\repos\XML_Integration\obj\Debug\XML_Integration.csproj.GenerateResource.cache
+C:\Users\u\source\repos\XML_Integration\obj\Debug\XML_Integration.csproj.CoreCompileInputs.cache
+C:\Users\u\source\repos\XML_Integration\obj\Debug\XML_Integration.exe
+C:\Users\u\source\repos\XML_Integration\obj\Debug\XML_Integration.pdb
