@@ -63,9 +63,49 @@ namespace XML_Integration.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CurrencyX_DinarIcon {
+            get {
+                object obj = ResourceManager.GetObject("CurrencyX_DinarIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CurrencyX_DollarIcon {
+            get {
+                object obj = ResourceManager.GetObject("CurrencyX_DollarIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CurrencyX_EuroIcon {
+            get {
+                object obj = ResourceManager.GetObject("CurrencyX_EuroIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CurrencyX_ExchanceIcon {
             get {
                 object obj = ResourceManager.GetObject("CurrencyX_ExchanceIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CurrencyX_SettingsIcon {
+            get {
+                object obj = ResourceManager.GetObject("CurrencyX_SettingsIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

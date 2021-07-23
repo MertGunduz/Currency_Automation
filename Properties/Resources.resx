@@ -118,7 +118,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="CurrencyX_DinarIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CurrencyX_DinarIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CurrencyX_DollarIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CurrencyX_DollarIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CurrencyX_EuroIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CurrencyX_EuroIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="CurrencyX_ExchanceIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CurrencyX_ExchanceIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CurrencyX_SettingsIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CurrencyX_SettingsIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
