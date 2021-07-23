@@ -16,8 +16,17 @@ namespace XML_Integration
         string xmlURL = "https://www.tcmb.gov.tr/kurlar/today.xml";
         XmlDocument xmlDocument = new XmlDocument();
 
-        string dollarAlisFiyati;
-        string DollarVerisFiyati;
+        // Dollar
+        double dollarBuyPrice;
+        double dollarSellPrice;
+
+        // Euro
+        double euroBuyPrice;
+        double euroSellPrice;
+
+        // Kuwait Dinar
+        double dinarBuyPrice;
+        double dinarSellPrice;
 
         public MainMenu_Form()
         {
@@ -28,7 +37,12 @@ namespace XML_Integration
         {
             xmlDocument.Load(xmlURL);
 
-            dollarAlisFiyati = xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='USD']/BanknoteBuying").InnerXml;
+            dollarBuyPrice = Convert.ToDouble(xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='USD']/BanknoteBuying").InnerXml);
+            dollarSellPrice = Convert.ToDouble(xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='USD']/BanknoteSelling").InnerXml);
+            euroBuyPrice = Convert.ToDouble(xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='EUR']/BanknoteBuying").InnerXml);
+            euroSellPrice = Convert.ToDouble(xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='EUR']/BanknoteSelling").InnerXml);
+            dinarBuyPrice = Convert.ToDouble(xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='KWD']/BanknoteBuying").InnerXml);
+            dinarSellPrice = Convert.ToDouble(xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='KWD']/BanknoteSelling").InnerXml);
         }
     }
 }

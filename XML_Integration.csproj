@@ -88,6 +88,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CurrencyX_ExchanceIcon.ico" />
+    <None Include="Resources\CurrencyX_MinimizeIcon.png" />
+    <None Include="Resources\CurrencyX_ExitIcon.png" />
+    <None Include="Resources\CurrencyX_SettingsIcon.png" />
+    <None Include="Resources\CurrencyX_EuroIcon.png" />
+    <None Include="Resources\CurrencyX_DollarIcon.png" />
+    <None Include="Resources\CurrencyX_DinarIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -103,6 +103,26 @@ namespace XML_Integration.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CurrencyX_ExitIcon {
+            get {
+                object obj = ResourceManager.GetObject("CurrencyX_ExitIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CurrencyX_MinimizeIcon {
+            get {
+                object obj = ResourceManager.GetObject("CurrencyX_MinimizeIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CurrencyX_SettingsIcon {
             get {
                 object obj = ResourceManager.GetObject("CurrencyX_SettingsIcon", resourceCulture);
