@@ -50,7 +50,7 @@ namespace XML_Integration
         string dinarBanknoteSellPriceXml;
 
         // Customer Operation
-        enum ButtonOperation {BuyUSD, SellUSD, BuyEUR, SellEUR, BuyKWD, SellKWD, Settings};
+        enum ButtonOperation { BuyUSD, SellUSD, BuyEUR, SellEUR, BuyKWD, SellKWD, Settings };
         ButtonOperation buttonOperation = new ButtonOperation();
 
         double customerMoneyTL;
@@ -119,7 +119,8 @@ namespace XML_Integration
             CurrencyUpdater(dollarName, dollarForexBuyPrice, dollarForexSellPrice, dollarBanknoteBuyPrice, dollarBanknoteSellPrice);
             XMLFormattedMoneyStatistics_RichTextBox.Text = $"{dollarNameXml}\n{dollarForexBuyPriceXml}\n{dollarForexSellPriceXml}\n{dollarBanknoteBuyPriceXml}\n{dollarBanknoteSellPriceXml}";
             CurrencyValue_TextBox.Text = $"  Currency Value: {dollarBanknoteBuyPrice}₺";
-            CustomerMoney_TextBox.Text = "   Customer Money (₺):";
+            CustomerMoney_TextBox.Text = "  Customer Money (₺):";
+            RemainderOfMoney_TextBox.Text = "  Remainder of Money:";
         }
 
         private void BuyUSD_Button_Click(object sender, EventArgs e)
@@ -129,7 +130,9 @@ namespace XML_Integration
             CurrencyUpdater(dollarName, dollarForexBuyPrice, dollarForexSellPrice, dollarBanknoteBuyPrice, dollarBanknoteSellPrice);
             XMLFormattedMoneyStatistics_RichTextBox.Text = $"{dollarNameXml}\n{dollarForexBuyPriceXml}\n{dollarForexSellPriceXml}\n{dollarBanknoteBuyPriceXml}\n{dollarBanknoteSellPriceXml}";
             CurrencyValue_TextBox.Text = $"  Currency Value: {dollarBanknoteBuyPrice}₺";
-            CustomerMoney_TextBox.Text = "   Customer Money (₺):";
+            CustomerMoney_TextBox.Text = "  Customer Money (₺):";
+            CustomerGet_TextBox.Text = "  Customer Get:";
+            RemainderOfMoney_TextBox.Text = "  Remainder of Money:";
         }
 
         private void SellUSD_Button_Click(object sender, EventArgs e)
@@ -139,7 +142,9 @@ namespace XML_Integration
             CurrencyUpdater(dollarName, dollarForexBuyPrice, dollarForexSellPrice, dollarBanknoteBuyPrice, dollarBanknoteSellPrice);
             XMLFormattedMoneyStatistics_RichTextBox.Text = $"{dollarNameXml}\n{dollarForexBuyPriceXml}\n{dollarForexSellPriceXml}\n{dollarBanknoteBuyPriceXml}\n{dollarBanknoteSellPriceXml}";
             CurrencyValue_TextBox.Text = $"  Currency Value: {dollarBanknoteSellPrice}₺";
-            CustomerMoney_TextBox.Text = "   Customer Money ($):";
+            CustomerMoney_TextBox.Text = "  Customer Money ($):";
+            CustomerGet_TextBox.Text = "  Customer Get:";
+            RemainderOfMoney_TextBox.Text = "  Remainder of Money:";
         }
 
         private void BuyEUR_Button_Click(object sender, EventArgs e)
@@ -149,7 +154,9 @@ namespace XML_Integration
             CurrencyUpdater(euroName, euroForexBuyPrice, euroForexSellPrice, euroBanknoteBuyPrice, euroBanknoteSellPrice);
             XMLFormattedMoneyStatistics_RichTextBox.Text = $"{euroNameXml}\n{euroForexBuyPriceXml}\n{euroForexSellPriceXml}\n{euroBanknoteBuyPriceXml}\n{euroBanknoteSellPriceXml}";
             CurrencyValue_TextBox.Text = $"  Currency Value: {euroBanknoteBuyPrice}₺";
-            CustomerMoney_TextBox.Text = "   Customer Money (₺):";
+            CustomerMoney_TextBox.Text = "  Customer Money (₺):";
+            CustomerGet_TextBox.Text = "  Customer Get:";
+            RemainderOfMoney_TextBox.Text = "  Remainder of Money:";
         }
 
         private void SellEUR_Button_Click(object sender, EventArgs e)
@@ -159,7 +166,9 @@ namespace XML_Integration
             CurrencyUpdater(euroName, euroForexBuyPrice, euroForexSellPrice, euroBanknoteBuyPrice, euroBanknoteSellPrice);
             XMLFormattedMoneyStatistics_RichTextBox.Text = $"{euroNameXml}\n{euroForexBuyPriceXml}\n{euroForexSellPriceXml}\n{euroBanknoteBuyPriceXml}\n{euroBanknoteSellPriceXml}";
             CurrencyValue_TextBox.Text = $"  Currency Value: {euroBanknoteSellPrice}₺";
-            CustomerMoney_TextBox.Text = "   Customer Money (€):";
+            CustomerMoney_TextBox.Text = "  Customer Money (€):";
+            CustomerGet_TextBox.Text = "  Customer Get:";
+            RemainderOfMoney_TextBox.Text = "  Remainder of Money:";
         }
 
         private void BuyKWD_Button_Click(object sender, EventArgs e)
@@ -169,7 +178,9 @@ namespace XML_Integration
             CurrencyUpdater(dinarName, dinarForexBuyPrice, dinarForexSellPrice, dinarBanknoteBuyPrice, dinarBanknoteSellPrice);
             XMLFormattedMoneyStatistics_RichTextBox.Text = $"{dinarNameXml}\n{dinarForexBuyPriceXml}\n{dinarForexSellPriceXml}\n{dinarBanknoteBuyPriceXml}\n{dinarBanknoteSellPriceXml}";
             CurrencyValue_TextBox.Text = $"  Currency Value: {dinarBanknoteBuyPrice}₺";
-            CustomerMoney_TextBox.Text = "   Customer Money (₺):";
+            CustomerMoney_TextBox.Text = "  Customer Money (₺):";
+            CustomerGet_TextBox.Text = "  Customer Get:";
+            RemainderOfMoney_TextBox.Text = "  Remainder of Money:";
         }
 
         private void SellKWD_Button_Click(object sender, EventArgs e)
@@ -180,12 +191,21 @@ namespace XML_Integration
             XMLFormattedMoneyStatistics_RichTextBox.Text = $"{dinarNameXml}\n{dinarForexBuyPriceXml}\n{dinarForexSellPriceXml}\n{dinarBanknoteBuyPriceXml}\n{dinarBanknoteSellPriceXml}";
             CurrencyValue_TextBox.Text = $"  Currency Value: {dinarBanknoteSellPrice}₺";
             CustomerMoney_TextBox.Text = "  Customer Money(د.ك):";
+            CustomerGet_TextBox.Text = "  Customer Get:";
+            RemainderOfMoney_TextBox.Text = "  Remainder of Money:";
         }
 
         private void Settings_Button_Click(object sender, EventArgs e)
         {
             buttonOperation = ButtonOperation.Settings;
             ButtonUIChange(Settings_Button, SellUSD_Button, BuyEUR_Button, SellEUR_Button, BuyKWD_Button, SellKWD_Button, BuyUSD_Button, Navigation_Panel, MenuHeader_Label);
+            
+            // Settings Needed
+            CurrencyValue_TextBox.Clear();
+            CustomerMoney_TextBox.Clear();
+            CustomerGet_TextBox.Clear();
+            RemainderOfMoney_TextBox.Clear();
+            XMLFormattedMoneyStatistics_RichTextBox.Clear();
         }
         private void Minimize_Button_Click(object sender, EventArgs e)
         {
@@ -240,6 +260,60 @@ namespace XML_Integration
             ForexSelling_Button.Text = $"Forex Selling:   {forexSellingPrice}";
             BanknoteBuying_Button.Text = $"Banknote Buying:   {banknoteBuyingPrice}";
             BanknoteSelling_Button.Text = $"Banknote Selling:   {banknoteSellingPrice}";
+        }
+
+        private void MakeExchangeButton_Click(object sender, EventArgs e)
+        {
+            if (buttonOperation == ButtonOperation.BuyUSD)
+            {
+                customerMoneyTL = Convert.ToDouble(CustomerMoney_TextBox.Text);
+                CustomerMoney_TextBox.Text = customerMoneyTL + "₺";
+                CustomerGet_TextBox.Text = Math.Truncate(customerMoneyTL / dollarBanknoteBuyPrice).ToString() + "$";
+                RemainderOfMoney_TextBox.Text = (customerMoneyTL % dollarBanknoteBuyPrice).ToString() + "₺";
+            }
+            else if (buttonOperation == ButtonOperation.SellUSD)
+            {
+                customerMoneyUSD = Convert.ToDouble(CustomerMoney_TextBox.Text);
+                CustomerMoney_TextBox.Text = customerMoneyUSD + "$";
+                CustomerGet_TextBox.Text = (customerMoneyUSD * dollarBanknoteSellPrice).ToString() + "₺";
+                RemainderOfMoney_TextBox.Text = "0₺";
+            }
+            else if (buttonOperation == ButtonOperation.BuyEUR)
+            {
+                customerMoneyTL = Convert.ToDouble(CustomerMoney_TextBox.Text);
+                CustomerMoney_TextBox.Text = customerMoneyTL + "₺";
+                CustomerGet_TextBox.Text = Math.Truncate(customerMoneyTL / euroBanknoteBuyPrice).ToString() + "€";
+                RemainderOfMoney_TextBox.Text = (customerMoneyTL % euroBanknoteBuyPrice).ToString() + "₺";
+            }
+            else if (buttonOperation == ButtonOperation.SellEUR)
+            {
+                customerMoneyEUR = Convert.ToDouble(CustomerMoney_TextBox.Text);
+                CustomerMoney_TextBox.Text = customerMoneyEUR + "€";
+                CustomerGet_TextBox.Text = (customerMoneyEUR * euroBanknoteSellPrice).ToString() + "₺";
+                RemainderOfMoney_TextBox.Text = "0₺";
+            }
+            else if (buttonOperation == ButtonOperation.BuyKWD)
+            {
+                customerMoneyTL = Convert.ToDouble(CustomerMoney_TextBox.Text);
+                CustomerMoney_TextBox.Text = customerMoneyTL + "₺";
+                CustomerGet_TextBox.Text = Math.Truncate(customerMoneyTL / dinarBanknoteBuyPrice).ToString() + "د.ك";
+                RemainderOfMoney_TextBox.Text = (customerMoneyTL % dinarBanknoteBuyPrice).ToString() + "₺";
+            }
+            else if (buttonOperation == ButtonOperation.SellKWD)
+            {
+                customerMoneyKWD = Convert.ToDouble(CustomerMoney_TextBox.Text);
+                CustomerMoney_TextBox.Text = customerMoneyKWD + "د.ك";
+                CustomerGet_TextBox.Text = (customerMoneyKWD * dinarBanknoteSellPrice).ToString() + "₺";
+                RemainderOfMoney_TextBox.Text = "0₺";
+            }
+        }
+
+        private void CustomerMoney_TextBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (CustomerMoney_TextBox.Text == "  Customer Money (₺):" || CustomerMoney_TextBox.Text == "  Customer Money ($):" || CustomerMoney_TextBox.Text == "  Customer Money (€):" || CustomerMoney_TextBox.Text == "  Customer Money(د.ك):")
+            {
+                CustomerMoney_TextBox.Clear();
+            }
         }
     }
 }

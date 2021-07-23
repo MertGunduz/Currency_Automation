@@ -743,6 +743,7 @@ namespace XML_Integration
             this.CustomerMoney_TextBox.Size = new System.Drawing.Size(624, 27);
             this.CustomerMoney_TextBox.TabIndex = 1;
             this.CustomerMoney_TextBox.Text = "  Customer Money:";
+            this.CustomerMoney_TextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CustomerMoney_TextBox_MouseClick);
             // 
             // CustomerGet_TextBox
             // 
@@ -778,6 +779,7 @@ namespace XML_Integration
             this.MakeExchangeButton.TabIndex = 3;
             this.MakeExchangeButton.Text = "Make Exchange";
             this.MakeExchangeButton.UseVisualStyleBackColor = false;
+            this.MakeExchangeButton.Click += new System.EventHandler(this.MakeExchangeButton_Click);
             // 
             // MainMenu_Form
             // 
