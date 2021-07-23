@@ -50,6 +50,9 @@ namespace XML_Integration
         string dinarBanknoteSellPriceXml;
 
         // Customer Operation
+        enum ButtonOperation {BuyUSD, SellUSD, BuyEUR, SellEUR, BuyKWD, SellKWD, Settings};
+        ButtonOperation buttonOperation = new ButtonOperation();
+
         double customerMoneyTL;
         double customerMoneyUSD;
         double customerMoneyEUR;
@@ -67,7 +70,12 @@ namespace XML_Integration
 
         private void MainMenu_Form_Load(object sender, EventArgs e)
         {
+            // Sets The Enum To BuyUSD
+            buttonOperation = ButtonOperation.BuyUSD;
+
+            // Loads The XML Document
             xmlDocument.Load(xmlURL);
+
             // Dollar
             dollarName = xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='USD']/CurrencyName").InnerXml;
             dollarForexBuyPrice = Convert.ToDouble(xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='USD']/ForexBuying").InnerXml);
@@ -107,6 +115,7 @@ namespace XML_Integration
             dinarBanknoteBuyPriceXml = xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='KWD']/BanknoteBuying").OuterXml;
             dinarBanknoteSellPriceXml = xmlDocument.SelectSingleNode(@"Tarih_Date/Currency[@CurrencyCode='KWD']/BanknoteSelling").OuterXml;
 
+            // Sets The BuyUSD Operation For Loading
             CurrencyUpdater(dollarName, dollarForexBuyPrice, dollarForexSellPrice, dollarBanknoteBuyPrice, dollarBanknoteSellPrice);
             XMLFormattedMoneyStatistics_RichTextBox.Text = $"{dollarNameXml}\n{dollarForexBuyPriceXml}\n{dollarForexSellPriceXml}\n{dollarBanknoteBuyPriceXml}\n{dollarBanknoteSellPriceXml}";
             CurrencyValue_TextBox.Text = $"  Currency Value: {dollarBanknoteBuyPrice}₺";
@@ -115,6 +124,7 @@ namespace XML_Integration
 
         private void BuyUSD_Button_Click(object sender, EventArgs e)
         {
+            buttonOperation = ButtonOperation.BuyUSD;
             ButtonUIChange(BuyUSD_Button, SellUSD_Button, BuyEUR_Button, SellEUR_Button, BuyKWD_Button, SellKWD_Button, Settings_Button, Navigation_Panel, MenuHeader_Label);
             CurrencyUpdater(dollarName, dollarForexBuyPrice, dollarForexSellPrice, dollarBanknoteBuyPrice, dollarBanknoteSellPrice);
             XMLFormattedMoneyStatistics_RichTextBox.Text = $"{dollarNameXml}\n{dollarForexBuyPriceXml}\n{dollarForexSellPriceXml}\n{dollarBanknoteBuyPriceXml}\n{dollarBanknoteSellPriceXml}";
@@ -124,6 +134,7 @@ namespace XML_Integration
 
         private void SellUSD_Button_Click(object sender, EventArgs e)
         {
+            buttonOperation = ButtonOperation.SellUSD;
             ButtonUIChange(SellUSD_Button, BuyUSD_Button, BuyEUR_Button, SellEUR_Button, BuyKWD_Button, SellKWD_Button, Settings_Button, Navigation_Panel, MenuHeader_Label);
             CurrencyUpdater(dollarName, dollarForexBuyPrice, dollarForexSellPrice, dollarBanknoteBuyPrice, dollarBanknoteSellPrice);
             XMLFormattedMoneyStatistics_RichTextBox.Text = $"{dollarNameXml}\n{dollarForexBuyPriceXml}\n{dollarForexSellPriceXml}\n{dollarBanknoteBuyPriceXml}\n{dollarBanknoteSellPriceXml}";
@@ -133,6 +144,7 @@ namespace XML_Integration
 
         private void BuyEUR_Button_Click(object sender, EventArgs e)
         {
+            buttonOperation = ButtonOperation.BuyEUR;
             ButtonUIChange(BuyEUR_Button, SellUSD_Button, BuyUSD_Button, SellEUR_Button, BuyKWD_Button, SellKWD_Button, Settings_Button, Navigation_Panel, MenuHeader_Label);
             CurrencyUpdater(euroName, euroForexBuyPrice, euroForexSellPrice, euroBanknoteBuyPrice, euroBanknoteSellPrice);
             XMLFormattedMoneyStatistics_RichTextBox.Text = $"{euroNameXml}\n{euroForexBuyPriceXml}\n{euroForexSellPriceXml}\n{euroBanknoteBuyPriceXml}\n{euroBanknoteSellPriceXml}";
@@ -142,6 +154,7 @@ namespace XML_Integration
 
         private void SellEUR_Button_Click(object sender, EventArgs e)
         {
+            buttonOperation = ButtonOperation.SellEUR;
             ButtonUIChange(SellEUR_Button, SellUSD_Button, BuyEUR_Button, BuyUSD_Button, BuyKWD_Button, SellKWD_Button, Settings_Button, Navigation_Panel, MenuHeader_Label);
             CurrencyUpdater(euroName, euroForexBuyPrice, euroForexSellPrice, euroBanknoteBuyPrice, euroBanknoteSellPrice);
             XMLFormattedMoneyStatistics_RichTextBox.Text = $"{euroNameXml}\n{euroForexBuyPriceXml}\n{euroForexSellPriceXml}\n{euroBanknoteBuyPriceXml}\n{euroBanknoteSellPriceXml}";
@@ -151,6 +164,7 @@ namespace XML_Integration
 
         private void BuyKWD_Button_Click(object sender, EventArgs e)
         {
+            buttonOperation = ButtonOperation.BuyKWD;
             ButtonUIChange(BuyKWD_Button, SellUSD_Button, BuyEUR_Button, SellEUR_Button, BuyUSD_Button, SellKWD_Button, Settings_Button, Navigation_Panel, MenuHeader_Label);
             CurrencyUpdater(dinarName, dinarForexBuyPrice, dinarForexSellPrice, dinarBanknoteBuyPrice, dinarBanknoteSellPrice);
             XMLFormattedMoneyStatistics_RichTextBox.Text = $"{dinarNameXml}\n{dinarForexBuyPriceXml}\n{dinarForexSellPriceXml}\n{dinarBanknoteBuyPriceXml}\n{dinarBanknoteSellPriceXml}";
@@ -160,6 +174,7 @@ namespace XML_Integration
 
         private void SellKWD_Button_Click(object sender, EventArgs e)
         {
+            buttonOperation = ButtonOperation.SellKWD;
             ButtonUIChange(SellKWD_Button, SellUSD_Button, BuyEUR_Button, SellEUR_Button, BuyKWD_Button, BuyUSD_Button, Settings_Button, Navigation_Panel, MenuHeader_Label);
             CurrencyUpdater(dinarName, dinarForexBuyPrice, dinarForexSellPrice, dinarBanknoteBuyPrice, dinarBanknoteSellPrice);
             XMLFormattedMoneyStatistics_RichTextBox.Text = $"{dinarNameXml}\n{dinarForexBuyPriceXml}\n{dinarForexSellPriceXml}\n{dinarBanknoteBuyPriceXml}\n{dinarBanknoteSellPriceXml}";
@@ -169,6 +184,7 @@ namespace XML_Integration
 
         private void Settings_Button_Click(object sender, EventArgs e)
         {
+            buttonOperation = ButtonOperation.Settings;
             ButtonUIChange(Settings_Button, SellUSD_Button, BuyEUR_Button, SellEUR_Button, BuyKWD_Button, SellKWD_Button, BuyUSD_Button, Navigation_Panel, MenuHeader_Label);
         }
         private void Minimize_Button_Click(object sender, EventArgs e)
