@@ -199,7 +199,7 @@ namespace XML_Integration
         {
             buttonOperation = ButtonOperation.Settings;
             ButtonUIChange(Settings_Button, SellUSD_Button, BuyEUR_Button, SellEUR_Button, BuyKWD_Button, SellKWD_Button, BuyUSD_Button, Navigation_Panel, MenuHeader_Label);
-            
+
             // Settings Needed
             CurrencyValue_TextBox.Clear();
             CustomerMoney_TextBox.Clear();
@@ -267,44 +267,44 @@ namespace XML_Integration
             if (buttonOperation == ButtonOperation.BuyUSD)
             {
                 customerMoneyTL = Convert.ToDouble(CustomerMoney_TextBox.Text);
-                CustomerMoney_TextBox.Text = customerMoneyTL + "₺";
-                CustomerGet_TextBox.Text = Math.Truncate(customerMoneyTL / dollarBanknoteBuyPrice).ToString() + "$";
-                RemainderOfMoney_TextBox.Text = (customerMoneyTL % dollarBanknoteBuyPrice).ToString() + "₺";
+                CustomerMoney_TextBox.Text = "  Customer Money: " + customerMoneyTL + "₺";
+                CustomerGet_TextBox.Text = "  Customer Get: " + Math.Truncate(customerMoneyTL / dollarBanknoteBuyPrice).ToString() + "$";
+                RemainderOfMoney_TextBox.Text = "  Remainder of Money: " + (customerMoneyTL % dollarBanknoteBuyPrice).ToString() + "₺";
             }
             else if (buttonOperation == ButtonOperation.SellUSD)
             {
                 customerMoneyUSD = Convert.ToDouble(CustomerMoney_TextBox.Text);
-                CustomerMoney_TextBox.Text = customerMoneyUSD + "$";
-                CustomerGet_TextBox.Text = (customerMoneyUSD * dollarBanknoteSellPrice).ToString() + "₺";
-                RemainderOfMoney_TextBox.Text = "0₺";
+                CustomerMoney_TextBox.Text = "  Customer Money: " + customerMoneyUSD + "$";
+                CustomerGet_TextBox.Text = "  Customer Get: " + (customerMoneyUSD * dollarBanknoteSellPrice).ToString() + "₺";
+                RemainderOfMoney_TextBox.Text = "  Remainder of Money: " + "0₺";
             }
             else if (buttonOperation == ButtonOperation.BuyEUR)
             {
                 customerMoneyTL = Convert.ToDouble(CustomerMoney_TextBox.Text);
-                CustomerMoney_TextBox.Text = customerMoneyTL + "₺";
-                CustomerGet_TextBox.Text = Math.Truncate(customerMoneyTL / euroBanknoteBuyPrice).ToString() + "€";
-                RemainderOfMoney_TextBox.Text = (customerMoneyTL % euroBanknoteBuyPrice).ToString() + "₺";
+                CustomerMoney_TextBox.Text = "  Customer Money: " + customerMoneyTL + "₺";
+                CustomerGet_TextBox.Text = "  Customer Get: " + Math.Truncate(customerMoneyTL / euroBanknoteBuyPrice).ToString() + "€";
+                RemainderOfMoney_TextBox.Text = "  Remainder of Money: " + (customerMoneyTL % euroBanknoteBuyPrice).ToString() + "₺";
             }
             else if (buttonOperation == ButtonOperation.SellEUR)
             {
                 customerMoneyEUR = Convert.ToDouble(CustomerMoney_TextBox.Text);
-                CustomerMoney_TextBox.Text = customerMoneyEUR + "€";
-                CustomerGet_TextBox.Text = (customerMoneyEUR * euroBanknoteSellPrice).ToString() + "₺";
-                RemainderOfMoney_TextBox.Text = "0₺";
+                CustomerMoney_TextBox.Text = "  Customer Money: " + customerMoneyEUR + "€";
+                CustomerGet_TextBox.Text = "  Customer Get: " + (customerMoneyEUR * euroBanknoteSellPrice).ToString() + "₺";
+                RemainderOfMoney_TextBox.Text = "  Remainder of Money: " + "0₺";
             }
             else if (buttonOperation == ButtonOperation.BuyKWD)
             {
                 customerMoneyTL = Convert.ToDouble(CustomerMoney_TextBox.Text);
-                CustomerMoney_TextBox.Text = customerMoneyTL + "₺";
-                CustomerGet_TextBox.Text = Math.Truncate(customerMoneyTL / dinarBanknoteBuyPrice).ToString() + "د.ك";
-                RemainderOfMoney_TextBox.Text = (customerMoneyTL % dinarBanknoteBuyPrice).ToString() + "₺";
+                CustomerMoney_TextBox.Text = "  Customer Money: " + customerMoneyTL + "₺";
+                CustomerGet_TextBox.Text = "  Customer Get: " + Math.Truncate(customerMoneyTL / dinarBanknoteBuyPrice).ToString() + "د.ك";
+                RemainderOfMoney_TextBox.Text = "  Remainder of Money: " + (customerMoneyTL % dinarBanknoteBuyPrice).ToString() + "₺";
             }
             else if (buttonOperation == ButtonOperation.SellKWD)
             {
                 customerMoneyKWD = Convert.ToDouble(CustomerMoney_TextBox.Text);
-                CustomerMoney_TextBox.Text = customerMoneyKWD + "د.ك";
-                CustomerGet_TextBox.Text = (customerMoneyKWD * dinarBanknoteSellPrice).ToString() + "₺";
-                RemainderOfMoney_TextBox.Text = "0₺";
+                CustomerMoney_TextBox.Text = "  Customer Money: " + customerMoneyKWD + "د.ك";
+                CustomerGet_TextBox.Text = "  Customer Get: " + (customerMoneyKWD * dinarBanknoteSellPrice).ToString() + "₺";
+                RemainderOfMoney_TextBox.Text = "  Remainder of Money: " + "0₺";
             }
         }
 
