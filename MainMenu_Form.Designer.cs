@@ -76,12 +76,19 @@ namespace XML_Integration
             this.Header_Label = new System.Windows.Forms.Label();
             this.Logo_Panel = new System.Windows.Forms.Panel();
             this.Logo_PictureBox = new System.Windows.Forms.PictureBox();
+            this.MakeDeal_ContainerMidExpandPanel = new System.Windows.Forms.Panel();
+            this.CurrencyValue_TextBox = new System.Windows.Forms.TextBox();
+            this.CustomerMoney_TextBox = new System.Windows.Forms.TextBox();
+            this.CustomerGet_TextBox = new System.Windows.Forms.TextBox();
+            this.RemainderOfMoney_TextBox = new System.Windows.Forms.TextBox();
+            this.MakeExchangeButton = new System.Windows.Forms.Button();
             this.Mid_Panel.SuspendLayout();
             this.Mid_ExpandPanel.SuspendLayout();
             this.Container_Panel.SuspendLayout();
             this.Container_ExpandPanel.SuspendLayout();
             this.MakeDeal_Panel.SuspendLayout();
             this.MakeDeal_ExpandPanel.SuspendLayout();
+            this.MakeDeal_MidExpandPanel.SuspendLayout();
             this.MoneyStatistics_Panel.SuspendLayout();
             this.MoneyStatistics_ExpandPanel.SuspendLayout();
             this.MoneyStatistics_RightPanel.SuspendLayout();
@@ -95,6 +102,7 @@ namespace XML_Integration
             this.Header_Panel.SuspendLayout();
             this.Logo_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo_PictureBox)).BeginInit();
+            this.MakeDeal_ContainerMidExpandPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // Mid_Panel
@@ -164,6 +172,7 @@ namespace XML_Integration
             // 
             // MakeDeal_MidExpandPanel
             // 
+            this.MakeDeal_MidExpandPanel.Controls.Add(this.MakeDeal_ContainerMidExpandPanel);
             this.MakeDeal_MidExpandPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MakeDeal_MidExpandPanel.Location = new System.Drawing.Point(10, 10);
             this.MakeDeal_MidExpandPanel.Name = "MakeDeal_MidExpandPanel";
@@ -700,6 +709,76 @@ namespace XML_Integration
             this.Logo_PictureBox.TabIndex = 0;
             this.Logo_PictureBox.TabStop = false;
             // 
+            // MakeDeal_ContainerMidExpandPanel
+            // 
+            this.MakeDeal_ContainerMidExpandPanel.Controls.Add(this.MakeExchangeButton);
+            this.MakeDeal_ContainerMidExpandPanel.Controls.Add(this.RemainderOfMoney_TextBox);
+            this.MakeDeal_ContainerMidExpandPanel.Controls.Add(this.CustomerGet_TextBox);
+            this.MakeDeal_ContainerMidExpandPanel.Controls.Add(this.CustomerMoney_TextBox);
+            this.MakeDeal_ContainerMidExpandPanel.Controls.Add(this.CurrencyValue_TextBox);
+            this.MakeDeal_ContainerMidExpandPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MakeDeal_ContainerMidExpandPanel.Location = new System.Drawing.Point(0, 0);
+            this.MakeDeal_ContainerMidExpandPanel.Name = "MakeDeal_ContainerMidExpandPanel";
+            this.MakeDeal_ContainerMidExpandPanel.Size = new System.Drawing.Size(656, 180);
+            this.MakeDeal_ContainerMidExpandPanel.TabIndex = 0;
+            // 
+            // CurrencyValue_TextBox
+            // 
+            this.CurrencyValue_TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(49)))), ((int)(((byte)(64)))));
+            this.CurrencyValue_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CurrencyValue_TextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(120)))), ((int)(((byte)(228)))));
+            this.CurrencyValue_TextBox.Location = new System.Drawing.Point(16, 12);
+            this.CurrencyValue_TextBox.Name = "CurrencyValue_TextBox";
+            this.CurrencyValue_TextBox.Size = new System.Drawing.Size(624, 27);
+            this.CurrencyValue_TextBox.TabIndex = 0;
+            this.CurrencyValue_TextBox.Text = "  Currency Value:";
+            // 
+            // CustomerMoney_TextBox
+            // 
+            this.CustomerMoney_TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(49)))), ((int)(((byte)(64)))));
+            this.CustomerMoney_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CustomerMoney_TextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(120)))), ((int)(((byte)(228)))));
+            this.CustomerMoney_TextBox.Location = new System.Drawing.Point(16, 45);
+            this.CustomerMoney_TextBox.Name = "CustomerMoney_TextBox";
+            this.CustomerMoney_TextBox.Size = new System.Drawing.Size(624, 27);
+            this.CustomerMoney_TextBox.TabIndex = 1;
+            this.CustomerMoney_TextBox.Text = "  Customer Money:";
+            // 
+            // CustomerGet_TextBox
+            // 
+            this.CustomerGet_TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(49)))), ((int)(((byte)(64)))));
+            this.CustomerGet_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CustomerGet_TextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(120)))), ((int)(((byte)(228)))));
+            this.CustomerGet_TextBox.Location = new System.Drawing.Point(16, 78);
+            this.CustomerGet_TextBox.Name = "CustomerGet_TextBox";
+            this.CustomerGet_TextBox.Size = new System.Drawing.Size(624, 27);
+            this.CustomerGet_TextBox.TabIndex = 2;
+            this.CustomerGet_TextBox.Text = "  Customer Get:";
+            // 
+            // RemainderOfMoney_TextBox
+            // 
+            this.RemainderOfMoney_TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(49)))), ((int)(((byte)(64)))));
+            this.RemainderOfMoney_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.RemainderOfMoney_TextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(120)))), ((int)(((byte)(228)))));
+            this.RemainderOfMoney_TextBox.Location = new System.Drawing.Point(16, 111);
+            this.RemainderOfMoney_TextBox.Name = "RemainderOfMoney_TextBox";
+            this.RemainderOfMoney_TextBox.Size = new System.Drawing.Size(624, 27);
+            this.RemainderOfMoney_TextBox.TabIndex = 2;
+            this.RemainderOfMoney_TextBox.Text = "  Remainder of Money:";
+            // 
+            // MakeExchangeButton
+            // 
+            this.MakeExchangeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(49)))), ((int)(((byte)(64)))));
+            this.MakeExchangeButton.FlatAppearance.BorderSize = 0;
+            this.MakeExchangeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MakeExchangeButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.MakeExchangeButton.Location = new System.Drawing.Point(16, 145);
+            this.MakeExchangeButton.Name = "MakeExchangeButton";
+            this.MakeExchangeButton.Size = new System.Drawing.Size(624, 27);
+            this.MakeExchangeButton.TabIndex = 3;
+            this.MakeExchangeButton.Text = "Make Exchange";
+            this.MakeExchangeButton.UseVisualStyleBackColor = false;
+            // 
             // MainMenu_Form
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -718,6 +797,7 @@ namespace XML_Integration
             this.Container_ExpandPanel.ResumeLayout(false);
             this.MakeDeal_Panel.ResumeLayout(false);
             this.MakeDeal_ExpandPanel.ResumeLayout(false);
+            this.MakeDeal_MidExpandPanel.ResumeLayout(false);
             this.MoneyStatistics_Panel.ResumeLayout(false);
             this.MoneyStatistics_ExpandPanel.ResumeLayout(false);
             this.MoneyStatistics_RightPanel.ResumeLayout(false);
@@ -731,6 +811,8 @@ namespace XML_Integration
             this.Header_Panel.ResumeLayout(false);
             this.Logo_Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Logo_PictureBox)).EndInit();
+            this.MakeDeal_ContainerMidExpandPanel.ResumeLayout(false);
+            this.MakeDeal_ContainerMidExpandPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -783,6 +865,12 @@ namespace XML_Integration
         private System.Windows.Forms.Button ForexSelling_Button;
         private System.Windows.Forms.Button ForexBuying_Button;
         private System.Windows.Forms.Button CurrencyName_Button;
+        private System.Windows.Forms.Panel MakeDeal_ContainerMidExpandPanel;
+        private System.Windows.Forms.TextBox CurrencyValue_TextBox;
+        private System.Windows.Forms.Button MakeExchangeButton;
+        private System.Windows.Forms.TextBox RemainderOfMoney_TextBox;
+        private System.Windows.Forms.TextBox CustomerGet_TextBox;
+        private System.Windows.Forms.TextBox CustomerMoney_TextBox;
     }
 }
 
